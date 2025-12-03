@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Excel – Tahák k písemce</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f4f6fb;
+            margin: 0;
+            color: #222;
+        }
+        .page {
+            max-width: 1100px;
+            margin: 30px auto 60px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            padding: 30px 40px 40px;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-left: 6px solid #3b82f6;
+            padding-left: 10px;
+        }
+        h3 {
+            margin-top: 20px;
+            color: #111827;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            background: #e0ecff;
+            color: #1d4ed8;
+        }
+        ul {
+            margin-top: 8px;
+        }
+        li {
+            margin-bottom: 4px;
+        }
+        .block {
+            padding: 14px 16px;
+            border-radius: 10px;
+            margin: 12px 0;
+            font-size: 0.95rem;
+        }
+        .tip {
+            background: #ecfdf5;
+            border-left: 4px solid #16a34a;
+        }
+        .warning {
+            background: #fef2f2;
+            border-left: 4px solid #dc2626;
+        }
+        .note {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+        }
+        code {
+            background: #f3f4f6;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: "Consolas", "Fira Code", monospace;
+            font-size: 0.92rem;
+        }
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        .card {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 14px 16px 16px;
+            border: 1px solid #e5e7eb;
+        }
+        .checklist li {
+            list-style: "✓ ";
+        }
+        .highlight {
+            background: #fefce8;
+            border-radius: 10px;
+            padding: 12px 16px;
+            border: 1px dashed #eab308;
+        }
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+        .pill-list span {
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: #e5e7eb;
+            font-size: 0.8rem;
+        }
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 1px solid #e5e7eb;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.86rem;
+            color: #6b7280;
+        }
+        @media print {
+            body { background: #fff; }
+            .page { box-shadow: none; margin: 0; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>Excel – tahák k písemce</h1>
+    <p class="subtitle">
+        Co musím umět: tabulky, vzorce, filtrování, grafy a absolutní adresování (<strong>dolary</strong>).
+    </p>
+
+    <div class="note block">
+        <strong>Jak s tahákem pracovat:</strong> projdi si postupně všechny kapitoly,
+        u každé si v Excelu zkus aspoň <strong>jeden vlastní příklad</strong>.
+        Písemka bude praktická – budeš dělat podobné věci jako tady.
+    </div>
+
+    <!-- 1. ZAKLADNI PRACE S TABULKOU -->
+    <h2>1. Základní práce s tabulkou</h2>
+    <span class="badge">Úplné základy</span>
+
+    <p>V Excelu pracujeme v <strong>buňkách</strong> (A1, B5…), které jsou v <strong>řádcích</strong> (1, 2, 3…) a <strong>sloupcích</strong> (A, B, C…).</p>
+
+    <ul>
+        <li>Umím <strong>napsat nadpis tabulky</strong> (např. „Rozpočet“, „Zisky firem“).</li>
+        <li>Vytvořím jednoduchou tabulku:
+            <ul>
+                <li>první řádek – <strong>záhlaví</strong> (názvy sloupců: „Položka“, „Cena“, „Kategorie“…)</li>
+                <li>další řádky – jednotlivé položky / firmy / studenti atd.</li>
+            </ul>
+        </li>
+        <li>Umím změnit <strong>šířku sloupců</strong> a <strong>výšku řádků</strong> (tažením za okraje v záhlaví).</li>
+        <li>Pojmenuju list (dole záložku) – např. „Písemka“, „Rozpočet“.</li>
+    </ul>
+
+    <div class="tip block">
+        <strong>TIP:</strong> Nadpis tabulky dej klidně o řádek výš, spoj buňky (Sloučit a zarovnat na střed)
+        a zvětši písmo. Tabulka pak vypadá „dospěleji“.
+    </div>
+
+    <!-- 2. FORMATOVANI -->
+    <h2>2. Formátování buněk</h2>
+    <span class="badge">Aby to vypadalo hezky</span>
+
+    <h3>2.1 Ohraničení (rámečky)</h3>
+    <ul>
+        <li>Vyberu oblast tabulky → kliknu na ikonu <strong>Ohraničení</strong>.</li>
+        <li>Umím:
+            <ul>
+                <li>vnější ohraničení (celá tabulka má rámeček)</li>
+                <li>vnitřní čáry (čáry mezi buňkami)</li>
+                <li>silnější linku pro záhlaví tabulky</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2.2 Barevné podbarvení</h3>
+    <ul>
+        <li>Vyberu buňky → ikona <strong>Barva výplně</strong>.</li>
+        <li>Typické použití:
+            <ul>
+                <li><strong>žlutě</strong> – buňky se vzorci (počítají)</li>
+                <li><strong>šedě</strong> – nadpisy a pomocné texty</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2.3 Formát čísel</h3>
+    <p>Umím nastavit, aby čísla vypadala správně:</p>
+    <ul>
+        <li><strong>Měna</strong> – Kč, €, $, atd. (formát čísla → měna nebo účetní).</li>
+        <li><strong>Procenta</strong> – např. <code>0,25</code> zobrazit jako <code>25&nbsp;%</code>.</li>
+        <li><strong>Počet desetinných míst</strong> – přidat/ubrat desetinná místa.</li>
+    </ul>
+
+    <div class="warning block">
+        <strong>Pozor:</strong> Procenta fungují správně jen tehdy, když je za nimi
+        <strong>správný vzorec</strong> (např. <code>=zisk / náklady</code>), nestačí napsat ručně „25 %“.
+    </div>
+
+    <!-- 3. VZORCE -->
+    <h2>3. Vzorce a výpočty</h2>
+    <span class="badge">Matematika v buňkách</span>
+
+    <p>Každý vzorec v Excelu začíná znakem <strong>=</strong>.</p>
+
+    <div class="columns">
+        <div class="card">
+            <h3>Základní operace</h3>
+            <ul>
+                <li>sčítání: <code>=A1 + B1</code></li>
+                <li>odčítání: <code>=A1 - B1</code></li>
+                <li>násobení: <code>=A1 * B1</code></li>
+                <li>dělení: <code>=A1 / B1</code></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Součty</h3>
+            <ul>
+                <li>součet více buněk: <code>=A1 + A2 + A3</code></li>
+                <li>součet oblasti: <code>=SUM(A1:A10)</code></li>
+            </ul>
+            <p>Funkce <code>SUM()</code> se používá skoro pořád.</p>
+        </div>
+        <div class="card">
+            <h3>Procenta</h3>
+            <p>Například zisk v % jako podíl z nákladů:</p>
+            <p><code>=C5 / B5</code> → buňku naformátujeme jako procenta.</p>
+        </div>
+    </div>
+
+    <div class="tip block">
+        <strong>TIP:</strong> Vzorec napíšu do první buňky a pak ho
+        <strong>zkopíruju tažením za pravý dolní roh</strong> buňky dolů (nebo doprava).
+    </div>
+
+    <!-- 4. ABSOLUTNI ADRESOVANI -->
+    <h2>4. Absolutní adresování (dolary / právníci)</h2>
+    <span class="badge">Důležité pro písemku</span>
+
+    <p>
+        Normálně, když vzorec kopírujeme dolů, mění se čísla řádků (A1 → A2 → A3).
+        Někdy ale chceme, aby se <strong>některá buňka nikdy nezměnila</strong> – např. buňka s kurzem EUR.
+    </p>
+
+    <ul>
+        <li><strong>Relativní adresa:</strong> <code>A1</code> – mění se při kopírování.</li>
+        <li><strong>Absolutní adresa:</strong> <code>$A$1</code> – zůstane vždy stejná.</li>
+    </ul>
+
+    <p>Využití u kurzů:</p>
+    <div class="highlight">
+        Máme:
+        <ul>
+            <li>v D5 zisk v Kč</li>
+            <li>v B27 kurz EUR (např. 25,60)</li>
+        </ul>
+        Vzorec pro přepočet na eura:<br>
+        <code>=D5 / $B$27</code><br><br>
+        Dolarové znaky udrží kurz pořád ve stejné buňce, i když vzorec
+        táhneme dolů na další firmy.
+    </div>
+
+    <div class="tip block">
+        <strong>Jak na to rychle:</strong> napíšu odkaz na buňku (např. B27) a
+        stisknu <strong>F4</strong> – Excel automaticky přidá <code>$B$27</code>.
+    </div>
+
+    <!-- 5. FILTROVANI -->
+    <h2>5. Filtrování dat</h2>
+    <span class="badge">Chci vidět jen to, co mě zajímá</span>
+
+    <p>Filtr slouží k tomu, aby se zobrazily jen některé řádky podle podmínky.</p>
+
+    <ol>
+        <li>Označím záhlaví tabulky (řádek s názvy sloupců).</li>
+        <li>Zapnu <strong>Filtr</strong> (ikona trychtýře / Data → Filtr).</li>
+        <li>V každém sloupci se objeví šipka. Kliknutím můžu:
+            <ul>
+                <li>vybrat jen určitou hodnotu (např. známka = 1)</li>
+                <li>filtrovat podle textu (např. jména začínající na „A“)</li>
+                <li>filtrovat podle čísel (větší než / menší než…)</li>
+            </ul>
+        </li>
+        <li>Filtr vypnu, když chci zase vidět všechny řádky.</li>
+    </ol>
+
+    <div class="tip block">
+        <strong>Příklad:</strong> seznam studentů a známek &rarr; vyfiltruji si
+        všechny, kteří dostali <strong>1</strong>, nebo všechny, kteří mají známku
+        <strong>větší než 3</strong>.
+    </div>
+
+    <!-- 6. ROZPOCET -->
+    <h2>6. Rozpočet a souhrny</h2>
+    <span class="badge">Praktické použití</span>
+
+    <p>Student by měl umět sestavit jednoduchý rozpočet:</p>
+
+    <ul>
+        <li>sloupec <strong>Položka</strong> – co kupuju (jídlo, cestovné…)</li>
+        <li>sloupec <strong>Kategorie</strong> – typ výdaje (škola, zábava, sport…)</li>
+        <li>sloupec <strong>Cena</strong> – kolik to stojí</li>
+    </ul>
+
+    <p>Umí:</p>
+    <ul>
+        <li>spočítat <strong>celkovou částku</strong> výdajů – <code>=SUM(Cena)</code></li>
+        <li>případně spočítat součet za jednu kategorii (např. jen „sport“)</li>
+        <li>nastavit formát na <strong>měnu</strong> (Kč, EUR, USD)</li>
+    </ul>
+
+    <!-- 7. GRAFY -->
+    <h2>7. Grafy</h2>
+    <span class="badge">Aby data byla vidět na první pohled</span>
+
+    <h3>7.1 Sloupcový graf</h3>
+    <ol>
+        <li>Označím <strong>dvě oblasti</strong> – názvy a hodnoty (např. firmy a jejich zisk).</li>
+        <li>Vložit → Sloupcový graf.</li>
+        <li>Upravím:
+            <ul>
+                <li>název grafu (např. „Zisky firem v Kč“)</li>
+                <li>popisky os (osa X = firmy, osa Y = zisk)</li>
+                <li>legendu (když je třeba)</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>7.2 Výsečový graf</h3>
+    <p>Ukazuje podíl částí na celku – např. kolik procent rozpočtu dám na jídlo / sport / školu.</p>
+
+    <div class="tip block">
+        <strong>TIP:</strong> Graf může být na stejném listu jako tabulka
+        nebo na novém listu (pravé tlačítko na graf → Přesunout graf).
+    </div>
+
+    <!-- 8. PRAKTICKY PRIKLAD -->
+    <h2>8. Praktická ukázka – „Firmy a zisky“</h2>
+    <span class="badge">Podobné může být u písemky</span>
+
+    <p>Typ úlohy (stejně jako na obrázku v zadání):</p>
+    <ol>
+        <li>Máme tabulku firem:
+            <ul>
+                <li>sloupec <strong>Prodej</strong> (kolik firma utržila)</li>
+                <li>sloupec <strong>Náklady</strong> (kolik ji to stálo)</li>
+            </ul>
+        </li>
+        <li>Vypočítáme:
+            <ul>
+                <li><strong>Zisk v Kč</strong> – rozdíl <code>Prodej - Náklady</code></li>
+                <li><strong>Zisk v %</strong> – <code>Zisk / Náklady</code></li>
+                <li><strong>Zisk v EUR</strong> – dělení kurzem (nutné absolutní adresování)</li>
+                <li>případně <strong>Zisk v USD, GBP</strong></li>
+            </ul>
+        </li>
+        <li>Sečteme celkové zisky všech firem (řádek „Celkem“).</li>
+        <li>Uděláme graf zisků v Kč.</li>
+    </ol>
+
+    <div class="highlight">
+        <strong>Ukázka vzorce pro zisk v EUR:</strong><br>
+        <code>=D5 / $B$27</code><br>
+        kde D5 = zisk v Kč a B27 = kurz EUR. Znak $ zajistí, že se kurz při kopírování nemění.
+    </div>
+
+    <!-- 9. CHECKLIST -->
+    <h2>9. Checklist před písemkou</h2>
+    <ul class="checklist">
+        <li>Umím vytvořit hezkou tabulku s ohraničením a barvami.</li>
+        <li>Umím nastavit formát buněk na měnu, procenta, počet desetinných míst.</li>
+        <li>Umím napsat a zkopírovat základní vzorce (+, -, *, /, SUM).</li>
+        <li>Umím spočítat procenta (např. zisk v %).</li>
+        <li>Rozumím rozdílu mezi <strong>A1</strong> a <strong>$A$1</strong>.</li>
+        <li>Umím použít absolutní adresu pro kurz nebo jinou konstantu.</li>
+        <li>Umím zapnout a použít filtr v tabulce.</li>
+        <li>Umím vytvořit sloupcový nebo výsečový graf a doplnit popisky.</li>
+    </ul>
+
+    <!-- 10. CO BUDE V PISEMCE -->
+    <h2>10. Co může být v písemce (obecně)</h2>
+
+    <p>Písemka bude praktická – budete pracovat přímo v Excelu. Může se objevit:</p>
+
+    <div class="pill-list">
+        <span>vytvoření a úprava tabulky</span>
+        <span>formátování čísel (měna, %)</span>
+        <span>výpočet zisku a zisku v %</span>
+        <span>přepočet měn s absolutní adresou</span>
+        <span>součty (SUM)</span>
+        <span>filtrování dat</span>
+        <span>sloupcový nebo výsečový graf</span>
+        <span>jedna komplexní úloha (např. rozpočet / firmy)</span>
+    </div>
+
+    <div class="note block" style="margin-top:16px;">
+        <strong>Fáze 2 – konkrétní písemka:</strong>  
+        Učitel vám dá podobnou tabulku jako v tomto taháku a vy
+        budete muset dopočítat žlutá pole, přepočíst měny, udělat graf
+        a případně vyfiltrovat určité hodnoty.
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        Tahák k Excelu – připraveno pro opakování před písemkou.  
+        Doporučení: vše si aspoň jednou zkuste v reálném souboru.
+    </div>
+</div>
+</body>
+</html>
