@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test z Excelu – zadání</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: #f4f6fb;
+        margin: 0;
+        color: #111827;
+      }
+      .page {
+        max-width: 960px;
+        margin: 30px auto 60px;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 24px 28px 36px;
+        box-shadow: 0 12px 35px rgba(15, 23, 42, 0.1);
+      }
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 6px;
+      }
+      .subtitle {
+        text-align: center;
+        color: #6b7280;
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin-top: 26px;
+        border-left: 5px solid #3b82f6;
+        padding-left: 10px;
+        font-size: 1.25rem;
+      }
+      h3 {
+        margin-top: 16px;
+        font-size: 1.05rem;
+      }
+      p {
+        line-height: 1.5;
+      }
+      ul,
+      ol {
+        margin-top: 6px;
+      }
+      li {
+        margin-bottom: 4px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.07em;
+        background: #e0ecff;
+        color: #1d4ed8;
+        margin-bottom: 6px;
+      }
+      .block {
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 0.93rem;
+        margin: 10px 0;
+      }
+      .note {
+        background: #eff6ff;
+        border-left: 4px solid #2563eb;
+      }
+      .tip {
+        background: #ecfdf5;
+        border-left: 4px solid #16a34a;
+      }
+      .warning {
+        background: #fef2f2;
+        border-left: 4px solid #dc2626;
+      }
+      code {
+        background: #f3f4f6;
+        padding: 1px 4px;
+        border-radius: 4px;
+        font-family: "Consolas", "Fira Code", monospace;
+        font-size: 0.9rem;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 8px 0 10px;
+        width: 100%;
+        max-width: 480px;
+        font-size: 0.9rem;
+      }
+      th,
+      td {
+        border: 1px solid #d1d5db;
+        padding: 4px 6px;
+        text-align: left;
+      }
+      th {
+        background: #f3f4f6;
+      }
+      .small {
+        font-size: 0.85rem;
+        color: #6b7280;
+      }
+      hr {
+        margin: 24px 0;
+        border: none;
+        border-top: 1px solid #e5e7eb;
+      }
+      .download-btn {
+        display: block;
+        width: fit-content;
+        margin: 20px auto;
+        padding: 16px 32px;
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+      .download-btn:hover {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+        transform: translateY(-2px);
+      }
+      .download-btn:active {
+        transform: translateY(0);
+      }
+      .download-icon {
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 1.3rem;
+      }
+      @media (max-width: 640px) {
+        .page {
+          margin: 10px;
+          padding: 18px;
+        }
+        .download-btn {
+          font-size: 1rem;
+          padding: 14px 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Test z Excelu</h1>
+      <p class="subtitle">
+        Zadání k souboru <strong>excel_test_zadani.xlsx</strong>
+        (pracuj přímo v tomto souboru – jen doplňuješ a upravuješ).
+      </p>
+
+      <a
+        href="https://docs.google.com/spreadsheets/d/14awOIDUYx4-kdLdaQHei26MDJrhpdqNR/export?format=xlsx"
+        class="download-btn"
+        download="excel_test_zadani.xlsx"
+      >
+        <span class="download-icon">⬇️</span>
+        Stáhnout testový soubor Excel
+      </a>
+
+      <div class="note block">
+        <strong>Obecná pravidla:</strong><br />
+        • pracuješ v Excelu, všechny výpočty dělej
+        <strong>pomocí vzorců</strong>, ne ručně<br />
+        • nic nemaž z připravených listů, jen doplňuj do žlutých buněk nebo
+        podle zadání<br />
+        • soubor nakonec ulož jako: <strong>prijmeni_excel_test.xlsx</strong>
+      </div>
+
+      <h2>Úkol 1 – Zisky firem (výpočty) – list „Zisky“</h2>
+      <span class="badge">16 bodů</span>
+
+      <p>
+        Na listu <strong>Zisky</strong> už máš připravený nadpis, tabulku s
+        firmami 1–5 a jejich prodejem a náklady. Žlutě jsou označená místa,
+        která máš doplnit.
+      </p>
+
+      <h3>Co máš udělat</h3>
+      <ol>
+        <li>
+          Do žlutých buněk ve sloupci <strong>Zisk (Kč)</strong> dopočítej zisk
+          firmy jako: <code>Zisk = Prodej - Náklady</code>.
+        </li>
+        <li>
+          Do sloupce <strong>Zisk v %</strong> spočítej, jaký je zisk v
+          procentech z nákladů: <code>Zisk v % = Zisk / Náklady</code>, potom
+          tento sloupec naformátuj jako procenta.
+        </li>
+        <li>
+          Na konci tabulky (řádek „Celkem“) dopočítej:
+          <ul>
+            <li>celkový zisk všech firem v Kč (součet sloupce Zisk),</li>
+            <li>celkový zisk v EUR (součet sloupce Zisk EUR),</li>
+            <li>celkový zisk v USD (součet sloupce Zisk USD).</li>
+          </ul>
+        </li>
+        <li>
+          V dolní části listu máš kurz EUR a USD v buňkách
+          <strong>B11</strong> a <strong>B12</strong>. Využij je pro přepočet:
+          <ul>
+            <li><strong>Zisk EUR</strong> = zisk v Kč / kurz EUR,</li>
+            <li><strong>Zisk USD</strong> = zisk v Kč / kurz USD.</li>
+          </ul>
+          Odkaz na kurz musí být v podobě <strong>absolutní adresy</strong> (s
+          dolary).
+        </li>
+      </ol>
+
+      <div class="tip block">
+        <strong>Tip:</strong> Vzorec napiš jen do prvního řádku (u Firma 1) a
+        pak ho <strong>zkopíruj tažením</strong> dolů. Ušetříš čas a zároveň se
+        ukáže, jestli umíš pracovat s adresami buněk.
+      </div>
+
+      <h2>Úkol 2 – Formátování tabulky „Zisky“</h2>
+      <span class="badge">8 bodů</span>
+
+      <p>
+        Po dopočítání všech hodnot má tabulka vypadat jako „hotová“ finanční
+        tabulka.
+      </p>
+
+      <h3>Co má tabulka splňovat</h3>
+      <ul>
+        <li>
+          Celá oblast s daty (A3:G9) je orámovaná – vnější i vnitřní čáry.
+        </li>
+        <li>
+          Řádek se záhlavím (A3:G3) má jiné podbarvení než zbytek tabulky.
+        </li>
+        <li>Řádek „Celkem“ (řádek 9) je zvýrazněn tučným písmem.</li>
+        <li>
+          Sloupce <strong>Prodej, Náklady a Zisk</strong> (B, C, D) mají formát
+          <strong>měna – Kč</strong> (bez desetinných míst).
+        </li>
+        <li>
+          Sloupec <strong>Zisk v %</strong> (E) je ve formátu procent (0–1
+          desetinné místo).
+        </li>
+        <li>
+          Sloupce <strong>Zisk EUR</strong> a <strong>Zisk USD</strong> (F, G)
+          jsou formátovány jako měna se dvěma desetinnými místy.
+        </li>
+      </ul>
+
+      <div class="warning block">
+        <strong>Pozor:</strong> Formát čísla není jen o vzhledu – ověř si, že
+        buňky opravdu mají správný typ (měna / procenta), ne jen ručně dopsané
+        znaky.
+      </div>
+
+      <h2>Úkol 3 – Rozpočet – list „Rozpočet“</h2>
+      <span class="badge">10 bodů</span>
+
+      <p>
+        Na listu <strong>Rozpočet</strong> je připravená tabulka s pěti
+        položkami (Jídlo, Doprava, Škola, Zábava, Sport) a jejich částkami v Kč.
+        Žlutě označená místa máš doplnit.
+      </p>
+
+      <h3>Co máš udělat</h3>
+      <ol>
+        <li>
+          V buňce <strong>B9</strong> spočítej celkovou částku všech výdajů
+          pomocí funkce <code>SUM()</code> (ne ručně).
+        </li>
+        <li>
+          Ve sloupci <strong>C</strong> vypočítej, jaký podíl z celkové částky
+          tvoří každá položka:
+          <ul>
+            <li>Podíl = <code>Částka / Celkem</code>,</li>
+            <li>
+              buňka s celkem (B9) musí být ve vzorci použita jako
+              <strong>absolutní adresa</strong> (tak, aby se při kopírování
+              vzorce neměnila).
+            </li>
+          </ul>
+        </li>
+        <li>
+          Sloupec C naformátuj jako procenta (doporučeno 1 desetinné místo).
+        </li>
+        <li>Tabulku rozumně orámuj a zviditelněn řádek „Celkem“.</li>
+      </ol>
+
+      <div class="tip block">
+        <strong>Tip:</strong> Vzorec pro procenta napiš jen do buňky C4,
+        zkontroluj, že správně odkazuje na B4 a B9, a pak ho zkopíruj do C5 až
+        C8.
+      </div>
+
+      <h2>Úkol 4 – Známky a filtrování – list „Známky“</h2>
+      <span class="badge">8 bodů</span>
+
+      <p>
+        Na listu <strong>Známky</strong> je připravený seznam deseti studentů a
+        jejich známek z písemky.
+      </p>
+
+      <h3>Co máš udělat</h3>
+      <ol>
+        <li>
+          Zapni <strong>filtr</strong> na řádku se záhlavím (Jméno, Známka).
+        </li>
+        <li>
+          Pomocí filtru zobraz jen studenty, kteří mají známku
+          <strong>1</strong> a spočítej, kolik jich je. Počet zapiš do žluté
+          buňky <strong>B15</strong>.
+        </li>
+        <li>
+          Změň nastavení filtru tak, aby byly zobrazeny jen známky
+          <strong>4 a 5</strong>. Znovu spočítej jejich počet a zapiš ho do
+          žluté buňky <strong>B16</strong>.
+        </li>
+      </ol>
+
+      <div class="warning block">
+        <strong>POZOR – důležitá součást úkolu!</strong><br />
+        Pokaždé, když budeš mít filtr nastavený (jen známka 1, nebo jen 4 a 5),
+        <strong>udělej screenshot toho, jak to máš vyfiltrované</strong> a vlož
+        ho také na tento list (Známky).<br /><br />
+        Screenshot uděláš např.:
+        <ul>
+          <li>
+            tlačítkem <strong>PRTSCN</strong> (Print Screen) a vložíš do Excelu,
+            nebo
+          </li>
+          <li>
+            kombinací <strong>WIN + SHIFT + S</strong> (výběr části obrazovky) a
+            potom vložíš do listu.
+          </li>
+        </ul>
+        Bez vložených screenshotů je úkol <strong>nesplněný / neúplný</strong>.
+      </div>
+
+      <div class="tip block">
+        <strong>Tip:</strong> Počet můžeš spočítat ručně pohledem do tabulky,
+        nebo můžeš použít funkci (například <code>COUNTA</code>), pokud to
+        stihneš.
+      </div>
+
+      <h2>Úkol 5 – Grafy – list „Grafy“</h2>
+      <span class="badge">8 bodů</span>
+
+      <p>
+        Na listu <strong>Grafy</strong> máš slovně shrnuté zadání. Grafy budou
+        vycházet z dat, která jsi spočítal v předchozích úkolech.
+      </p>
+
+      <h3>Co máš udělat</h3>
+      <ol>
+        <li>
+          Z listu <strong>Zisky</strong> vytvoř <strong>sloupcový graf</strong>:
+          <ul>
+            <li>na ose X budou názvy firem (A4:A8),</li>
+            <li>na ose Y bude zisk v Kč (D4:D8),</li>
+            <li>graf pojmenuj např. <strong>„Zisky firem v Kč“</strong>.</li>
+          </ul>
+        </li>
+        <li>
+          Z listu <strong>Rozpočet</strong> vytvoř
+          <strong>výsečový graf</strong>:
+          <ul>
+            <li>použij názvy položek (A4:A8) a částky (B4:B8),</li>
+            <li>
+              zobraz legendu nebo popisky tak, aby bylo jasné, která část výseče
+              patří které položce,
+            </li>
+            <li>
+              graf pojmenuj např. <strong>„Rozpočet – podíl položek“</strong>.
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <div class="note block">
+        <strong>Poznámka:</strong> Grafy můžeš vytvořit:
+        <ul>
+          <li>
+            buď přímo na listech, kde jsou data (<strong>Zisky</strong>,
+            <strong>Rozpočet</strong>),
+          </li>
+          <li>nebo je můžeš přesunout na list <strong>Grafy</strong>.</li>
+        </ul>
+        Důležité je, aby byly grafy přehledné a odpovídaly zadání.
+      </div>
+
+      <hr />
+
+      <p class="small">
+        <strong>Rada na závěr:</strong> než test odevzdáš, projdi si každý list
+        a zkontroluj, jestli: (1) všude používáš vzorce, (2) tabulky jsou
+        přehledné a čitelně naformátované, (3) grafy odpovídají zadání a u
+        filtrů máš vložené screenshoty.
+      </p>
+    </div>
+  </body>
+</html>
