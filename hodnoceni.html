@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prehled hodnoceni Excel testu</title>
+  <link rel="stylesheet" href="report_hodnoceni.css" />
+</head>
+<body>
+  <div class="scene">
+    <header class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Automaticke hodnoceni</p>
+        <h1>Prehled bodovani Excel testu</h1>
+        <p class="lead">
+          Prakticky a detailni rozpis, jak se u kazdeho ukolu ziskavaji body.
+          Stavene na pravidlech v <span class="tag">PLAN_HODNOCENI_TESTU.md</span>.
+        </p>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__value">5</span>
+            <span class="stat__label">ukolu</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">50</span>
+            <span class="stat__label">bodu celkem</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">4</span>
+            <span class="stat__label">typy kontrol</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__card">
+        <div class="card">
+          <h2>Rychly souhrn</h2>
+          <ul class="list">
+            <li><span>Ukol 1</span><strong>Zisky firem</strong><em>16 bodu</em></li>
+            <li><span>Ukol 2</span><strong>Formatovani</strong><em>8 bodu</em></li>
+            <li><span>Ukol 3</span><strong>Rozpocet</strong><em>10 bodu</em></li>
+            <li><span>Ukol 4</span><strong>Znamky + filtr</strong><em>8 bodu</em></li>
+            <li><span>Ukol 5</span><strong>Grafy</strong><em>8 bodu</em></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="grid">
+        <article class="panel">
+          <div class="panel__head">
+            <h3>Ukol 1 – Zisky firem</h3>
+            <span class="chip">16 bodu</span>
+          </div>
+          <p class="panel__lead">List <strong>Zisky</strong>. Vzorce, soucty a formaty.</p>
+          <div class="panel__body">
+            <div class="block">
+              <h4>Vzorce v tabulce (8 bodu)</h4>
+              <ul>
+                <li>D4:D8 Zisk v Kc = <code>Prodej - Naklady</code> (2 body; 0.4 za radek)</li>
+                <li>E4:E8 Zisk v % = <code>Zisk / Naklady</code> (2 body; 0.4 za radek)</li>
+                <li>F4:F8 Zisk EUR = <code>Zisk / $B$11</code> (2 body; 0.4 za radek + $)</li>
+                <li>G4:G8 Zisk USD = <code>Zisk / $B$12</code> (2 body; 0.4 za radek + $)</li>
+              </ul>
+            </div>
+            <div class="block">
+              <h4>Soucty (4 body)</h4>
+              <ul>
+                <li>D9, F9, G9 musi byt soucty (<code>SUM</code>)</li>
+                <li>Kazdy spravny soucet = cca 1.33 bodu</li>
+              </ul>
+            </div>
+            <div class="block">
+              <h4>Formaty (4 body)</h4>
+              <ul>
+                <li>Sloupec E format procent (2 body)</li>
+                <li>Sloupce F a G format meny se 2 des. misty (2 body)</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel__head">
+            <h3>Ukol 2 – Formatovani tabulky Zisky</h3>
+            <span class="chip">8 bodu</span>
+          </div>
+          <p class="panel__lead">List <strong>Zisky</strong>. Vzhled a cistota tabulky.</p>
+          <div class="panel__body">
+            <ul>
+              <li>Ohraniceni oblasti A3:G9 (2 body)</li>
+              <li>Barevne zahlavi A3:G3 (2 body)</li>
+              <li>Radek „Celkem“ tucne (2 body)</li>
+              <li>Format meny a procent (2 body; vedeno zvlast)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel__head">
+            <h3>Ukol 3 – Rozpocet</h3>
+            <span class="chip">10 bodu</span>
+          </div>
+          <p class="panel__lead">List <strong>Rozpocet</strong>. Soucty, podily, formaty.</p>
+          <div class="panel__body">
+            <ul>
+              <li>B9 = <code>SUM(B4:B8)</code> (3 body)</li>
+              <li>C4:C8 podil z celku = <code>B4/$B$9</code> (4 body; 0.8 za radek)</li>
+              <li>Format procent ve sloupci C (2 body)</li>
+              <li>Ohraniceni tabulky (1 bod)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel__head">
+            <h3>Ukol 4 – Znamky a filtrovani</h3>
+            <span class="chip">8 bodu</span>
+          </div>
+          <p class="panel__lead">List <strong>Znamky</strong>. Filtr + dukazy.</p>
+          <div class="panel__body">
+            <ul>
+              <li>Zapnuty filtr (2 body)</li>
+              <li>Pocty v B15 a B16 po filtrovani (2 body)</li>
+              <li>Screenshoty vlozene do listu (4 body)</li>
+            </ul>
+            <div class="callout">
+              <strong>Kriticke pravidlo:</strong> Bez screenshotu je ukol nesplnen.
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel__head">
+            <h3>Ukol 5 – Grafy</h3>
+            <span class="chip">8 bodu</span>
+          </div>
+          <p class="panel__lead">Grafy mohou byt na libovolnem listu.</p>
+          <div class="panel__body">
+            <ul>
+              <li>2 grafy = 8 bodu, 1 graf = 4 body, 0 grafu = 0 bodu</li>
+              <li>Sloupcovy graf ze Zisky (A4:A8 vs D4:D8)</li>
+              <li>Vysecovy graf z Rozpocet (A4:A8 vs B4:B8)</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="grading">
+        <div class="grading__head">
+          <h3>Znamkovani</h3>
+          <p>Prevod procent na znamku dle planu hodnoceni.</p>
+        </div>
+        <div class="grading__grid">
+          <div class="grade">
+            <span class="grade__value">1</span>
+            <span class="grade__label">90-100 %</span>
+            <span class="grade__detail">45-50 bodu</span>
+          </div>
+          <div class="grade">
+            <span class="grade__value">2</span>
+            <span class="grade__label">75-89 %</span>
+            <span class="grade__detail">38-44 bodu</span>
+          </div>
+          <div class="grade">
+            <span class="grade__value">3</span>
+            <span class="grade__label">60-74 %</span>
+            <span class="grade__detail">30-37 bodu</span>
+          </div>
+          <div class="grade">
+            <span class="grade__value">4</span>
+            <span class="grade__label">45-59 %</span>
+            <span class="grade__detail">23-29 bodu</span>
+          </div>
+          <div class="grade">
+            <span class="grade__value">5</span>
+            <span class="grade__label">0-44 %</span>
+            <span class="grade__detail">0-22 bodu</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="note">
+        <h3>Poznamka k automatickemu hodnoceni</h3>
+        <p>
+          Hodnoceni vychazi z kontroly vzorcu, formatu, ohraniceni, filtru,
+          pritomnosti obrazku a grafu. U obrazku se kontroluje vlozeni jako
+          objekty v listu Znamky, proto bez screenshotu neni ukol 4 splnen.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Report vytvoren pro rychlou orientaci v bodovani Excel testu.</p>
+    </footer>
+  </div>
+</body>
+</html>
